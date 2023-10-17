@@ -1,7 +1,6 @@
 # Aplicação Web Json
 
 ### Documentação
-For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.1.4/maven-plugin/reference/html/)
@@ -17,5 +16,6 @@ Na raiz do projeto é feito build do projeto e criado a imagem:
 
 Em seguida é executado a imagem criada especificando a porta que rodará a aplicação: `docker run -it -p 8080:8080 app:1.0 `
 
-
+Rota de visualização da mensagem exibida em formato de dado Json.
+* `http://localhost:8080/menssage`
 
