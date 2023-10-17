@@ -1,6 +1,6 @@
-# Getting Started
+# Aplicação Web Json
 
-### Reference Documentation
+### Documentação
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
@@ -8,10 +8,14 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.4/maven-plugin/reference/html/#build-image)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.4/reference/htmlsingle/index.html#web)
 
-### Guides
-The following guides illustrate how to use some features concretely:
+### Orientações de execução
+#### Criação da imagem
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+Na raiz do projeto é feito build do projeto e criado a imagem:
+`docker build -t app:1.0 .` o 1.0 é  criado uma tag para essa imagem que será gerada.
+
+
+Em seguida é executado a imagem criada especificando a porta que rodará a aplicação: `docker run -it -p 8080:8080 app:1.0 `
+
+
 
