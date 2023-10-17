@@ -14,8 +14,8 @@ Na raiz do projeto é feito build do projeto e criado a imagem:
 `docker build -t app:1.0 .` o 1.0 é  criado uma tag para essa imagem que será gerada.
 
 
-Em seguida é executado a imagem criada especificando a porta que rodará a aplicação: `docker run -it -p 8080:8080 app:1.0 `
+Em seguida pode ser executado o container com a imagem criada especificando a porta que rodará a aplicação: `docker run -it -p 8080:8080 app:1.0 `
 
-Rota de visualização da mensagem exibida em formato de dado Json.
-* `http://localhost:8080/menssage`
+No navegador colar o link da rota de visualização da mensagem, que será exibida em formato Json.
 
+* [Link](http://localhost:8080/menssage)
