@@ -1,6 +1,10 @@
 package br.com.alaim.projectJson;
 
+import jakarta
+import lombok.Data;
 
+@Data
+@Entity("tb")
 public class Texto {
 
     private String menssage;
