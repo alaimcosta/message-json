@@ -1,0 +1,25 @@
+version: "3.5"
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: 12345
+      MYSQL_DATABASE: banco-de-dados
+    ports:
+      - "3306:3306"
+    volumes:
+      - /path/on/host:/var/lib/mysql
+  message_app:
+    container_name: app
+    image: app
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=jdbc:postgresql://db:3306/banco-de-dados
+      - DATABASE_USERNAME=usuario
+      - DATABASE_PASSWORD=12345
+    depends_on:
+      - db
