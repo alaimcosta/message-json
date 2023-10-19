@@ -31,9 +31,10 @@ public class MensageController {
     @GetMapping("/{id}")
     public Texto getUserById(@PathVariable Long id) {
         return textoRepository.findById(id).get();
+
     }
 
-    @PostMapping
+    @PostMapping("/menssage")
     public Texto createTexto(Texto texto) {
         return textoRepository.save(texto);
     }
