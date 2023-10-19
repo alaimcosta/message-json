@@ -1,11 +1,20 @@
 package br.com.alaim.projectJson;
 
-import jakarta
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.util.UUID;
+
 @Data
-@Entity("tb")
+@Entity(name="tb_texto")
 public class Texto {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     private String menssage;
 
