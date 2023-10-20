@@ -1,24 +1,27 @@
 version: "3.5"
+
 services:
   db:
-    image: mysql:8.0.33
+    image: mysql:8.0.34
     restart: always
     environment:
-      -MYSQL_DATABASE: text_db
-      -MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: text_db
+      MYSQL_ROOT_PASSWORD: 12345
     ports:
       - "3306:3306"
     volumes:
-      - /path/on/host:/var/lib/mysql
+      - db:/var/lib/mysql
   message_app:
-    container_name: app
-    image: app
+    depends_on:
+      - db
+    #container_name: app
+    #image: app
     build: .
     ports:
       - "8080:8080"
     environment:
-      - DATABASE_URL=jdbc:postgresql://db:3306/text_db
+      - DATABASE_URL=jdbc:mysql://localhost:3306/text_db
       - DATABASE_USERNAME=usuario
       - DATABASE_PASSWORD=12345
-    depends_on:
-      - db
+volumes:
+  db:

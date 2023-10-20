@@ -1,28 +1,42 @@
 package br.com.alaim.projectJson;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.UUID;
 
-@Data
-@Entity(name="tb_texto")
+@Entity
+@Table(name="tb_texto")
 public class Texto {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
+    @Column(name = "menssage")
     private String menssage;
 
-    public Texto(String menssage) {
+    public Texto(){
+    }
+
+    public Texto(long id, String menssage) {
+        this.id = id;
         this.menssage = menssage;
     }
 
-    public String getMessage() {
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getMenssage() {
         return menssage;
+    }
+
+    public void setMenssage(String menssage) {
+        this.menssage = menssage;
     }
 }
