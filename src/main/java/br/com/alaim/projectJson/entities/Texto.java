@@ -12,9 +12,7 @@ public class Texto {
     private String menssage;
 
     public Texto(){
-
     }
-
     public Texto(Long id, String menssage) {
         this.id = id;
         this.menssage = menssage;
@@ -34,6 +32,11 @@ public class Texto {
 
     public void setMenssage(String menssage) {
         this.menssage = menssage;
+    }
+
+
+    public String messageTexto(String msg){
+        return msg;
     }
 
 

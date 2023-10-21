@@ -12,12 +12,6 @@ public class MensageController {
     @Autowired
     private TextoRepository textoRepository;
 
-    @GetMapping
-    public String  getTexto() {
-        return "hello, word!";
-    }
-
-
     @GetMapping("/{id}")
     public Texto getUserById(@PathVariable Long id) {
         return textoRepository.findById(id).get();
