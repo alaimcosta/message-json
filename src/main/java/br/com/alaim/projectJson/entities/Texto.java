@@ -1,10 +1,8 @@
 package br.com.alaim.projectJson.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
-
-import java.util.UUID;
 
 @Entity
 @Table(name="tb_texto")
@@ -17,9 +15,10 @@ public class Texto {
     private String menssage;
 
     public Texto(){
+
     }
 
-    public Texto(long id, String menssage) {
+    public Texto(Long id, String menssage) {
         this.id = id;
         this.menssage = menssage;
     }
@@ -39,4 +38,6 @@ public class Texto {
     public void setMenssage(String menssage) {
         this.menssage = menssage;
     }
+
+
 }

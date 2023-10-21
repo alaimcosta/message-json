@@ -7,15 +7,33 @@
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.4/maven-plugin/reference/html/#build-image)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.4/reference/htmlsingle/index.html#web)
 
+#### DB
+Banco de dados utilizado é o PostgreSQL na versão 12.
+
+
 ### Orientações de execução
-#### Criação da imagem
+#### Criação da imagem e container
 
-Na raiz do projeto é feito build do projeto e criado a imagem:
-`docker build -t app:1.0 .` o 1.0 é  criado uma tag para essa imagem que será gerada.
+Na raiz do projeto execute:
+`docker compose up` no qual fará a execução da imagem do projeto e suas dependências.
 
+### Testes
 
-Em seguida pode ser executado o container com a imagem criada especificando a porta que rodará a aplicação: `docker run -it -p 8080:8080 app:1.0 `
+Método POST para persistir uma mensagem
 
-No navegador colar o link da rota de visualização da mensagem, que será exibida em formato Json.
+* Rota: `http://localhost:8080/menssage`
+
+Parâmetros:
+`{
+"menssage":"Mensagem de teste"
+}`
+
+<br/>
+
+Método GET para obter a mensagem passando o id
+
+* Rota: `http://localhost:8080/menssage/{id}`
+
 
 * [Link](http://localhost:8080/menssage)
+

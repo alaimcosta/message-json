@@ -15,7 +15,6 @@ services:
   message_app:
     depends_on:
       - db
-    container_name: app
     image: app
     build: .
     ports:
