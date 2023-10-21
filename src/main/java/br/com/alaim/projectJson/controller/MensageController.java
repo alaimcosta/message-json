@@ -3,7 +3,6 @@ package br.com.alaim.projectJson.controller;
 import br.com.alaim.projectJson.entities.Texto;
 import br.com.alaim.projectJson.repositories.TextoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

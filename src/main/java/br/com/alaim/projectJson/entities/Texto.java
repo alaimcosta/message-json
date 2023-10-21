@@ -1,7 +1,4 @@
 package br.com.alaim.projectJson.entities;
-
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
