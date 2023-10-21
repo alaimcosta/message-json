@@ -1,4 +1,4 @@
-package br.com.alaim.projectJson;
+package br.com.alaim.projectJson.entities;
 
 
 import jakarta.persistence.*;
