@@ -1,6 +1,8 @@
 version: "3.5"
 
 services:
+  reverse-proxy:
+    image: nginx:1.7
   db:
     image: postgres:12-alpine
     restart: always
